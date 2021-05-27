@@ -1,38 +1,25 @@
-<img  align="left" width="150" style="float: left;" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/CEI/LOGOTIPO%20leyenda%20color%20JPG%20p.png">
-<img  align="right" width="150" style="float: right;" src="https://miriadax.net/miriadax-theme/images/custom/logo_miriadax_new.svg">
+<img  align="left" height="50" style="float: left;" src="./assets/images/logos/solotexto.png">
+<img  align="right" height="50" style="float: right;" src="./assets/images/logos/ijk.png">
 
 <br/><br/><br/>
 
 
-# Módulo 5: Tipos y clases predefinidas, el tipo number, Multi-asignación, Spread-Rest, Clases ES6 y Herencia y Ejecución de programas JS. - Entrega P2P: Juego de disparos
+# Classic Spaceship Shooter Game - PWA
 
-Versión: 24 de Mayo de 2020
+Versión: 4 de Mayo de 2021
 
-## Objetivo
+## Abstract
 
-Practicar con clases, Booleans, Strings y con el manejo de eventos.
+PWA consistente en un clásico juego de disparos de naves espaciales con perspectiva cenital. No hay canvas, el juego transcurre directamente en el body.
 
-## Descripción de la práctica
+## Descripción
 
-En esta entrega vamos a desarrollar un juego completo usando HTML, CSS y JavaScript. El juego consiste en un juego clásico de disparos, en el que manejaremos a nuestro personaje (cuadrado) utilizando las flechas del teclado o la pantalla táctil. El objetivo del juego es disparar a una serie de formas que aparecerán en la pantalla para convertirlas en estrellas, a la vez que esquivamos sus disparos. Para comenzar el desarrollo partimos de la versión básica del juego cuyo código proporcionamos.
+Juego desarrollado con HTML, CSS y JavaScript. No se ha usado canvas. Clásico juego de disparos, en el que manejaremos a nuestro personaje (nave) desde una perspectiva cenital utilizando las flechas del teclado o la pantalla táctil. **El objetivo es todo un clásico: disparar a una serie de naves que aparecerán en la pantalla a la vez que esquivamos sus disparos.**
 
 <p align="center">
-  <img width="187" height="264" style="border: 1px solid grey;" src="https://raw.githubusercontent.com/ging-moocs/MOOC_html_mod5-juego_entrega/master/assets/screenshot.png">
+  <img width="500" height="645" style="border: 1px solid grey;" src="./assets/images/del_readme/juego.jpg">
 </p>
 
-
-## Descargar el código del proyecto
-
-El proyecto debe descargarse o clonarse en el ordenador desde el que se está trabajando. Para ello podemos descargar el paquete zip con el código desde el desplegable verde que está en la parte superior de la página de GitHub y que indica "Code" y ahí seleccionar la opción "Download ZIP". Alternativamente se puede usar GIT si se conoce para clonar el proyecto, el comando sería el siguiente: 
-
-```
-$ git clone https://github.com/ging-moocs/MOOC_html_mod5-juego_entrega
-```
-A continuación se debe acceder al directorio de trabajo.
-
-```
-$ cd MOOC_html_mod5-juego_entrega
-```
 ## Elementos del juego
 
 En este código, para modelar cada uno de los elementos del juego empleamos una clase JavaScript con sus métodos y atributos, los cuales se describen a continuación:
@@ -48,7 +35,7 @@ En el propio código están documentados todos los atributos y métodos de estas
 El siguiente diagrama muestra la jerarquía de herencia de clases:
 
 <p align="center">
-  <img width="495" height="591" src="https://raw.githubusercontent.com/ging-moocs/MOOC_html_mod5-juego_entrega/master/assets/clases.png">
+  <img width="495" height="591" src="./assets/images/del_readme/clases.png">
 </p>
 
 ## Comienzo y actualización del juego
@@ -88,48 +75,3 @@ Para implementar las tres funcionalidades debes seguir los siguientes pasos:
 6. Crear una clase nueva llamada _Boss_ en un nuevo fichero llamado ``Boss.js`` (no te olvides de importarlo en `index.html`). Esta clase debe heredar los métodos y atributos necesarios de la clase _Opponent_ sobreescribiendo aquellos que sean necesarios para lograr la funcionalidad requerida. Para representar al jefe final puedes usar las imágenes ``jefe.png`` y ``jefe_muerto.png`` de la carpeta assets.
 7. Modificar el código necesario en el método `removeOpponent` de _Game_ para que cuando el jugador consiga matar al triángulo, le aparezca el desafío final. Es decir, el atributo opponent de la instancia de _Game_ debe contener un objeto `_Boss_`cuando el jugador derrote al oponente inicial. 
 8. Modificar el código de la función ``endGame`` (no modificar la cabecera) para que, si el jugador consigue derrotar al jefe final, es decir, gane la partida con mas de 0 vidas, aparezca la imagen ``you_win.png`` de la carpeta assets, en vez de ``game_over.png``.
-
-
-## Prueba de la práctica 
-
-Para ayudar al desarrollo, se provee una herramienta de autocorrección que prueba las distintas funcionalidades que se piden en el enunciado. Para utilizar esta herramienta debes tener node.js (y npm) ([https://nodejs.org/es/](https://nodejs.org/es/)) y Git instalados. 
-
-Para instalar y hacer uso de la [herramienta de autocorrección](https://www.npmjs.com/package/moocauto) en el ordenador local, ejecuta los siguientes comandos en el directorio del proyecto:
-
-```
-$ npm install -g moocauto     ## Instala el programa de test
-$ moocauto                    ## Pasa los tests al fichero a entregar
-............................  ## en el directorio de trabajo
-... (resultado de los tests)
-```
-También se puede instalar como paquete local, en el caso de que no se dispongas de permisos en el ordenador desde el que estás trabajando:
-```
-$ npm install moocauto         ## Instala el programa de test
-$ npx moocauto                 ## Pasa los tests al fichero a entregar
-............................   ## en el directorio de trabajo
-... (resultado de los tests)
-```
-
-
-Se puede pasar la herramienta de autocorrección tantas veces como se desee.
-
-## Entrega de la práctica
-
-El alumno debe subir un fichero comprimido ZIP incluyendo todos los ficheros de la práctica.
-Recuerde borrar el directorio node_modules antes de hacer el ZIP si ha instalado el moocauto sin la opción -g, ya que ese directorio no es necesario en la entrega.
-
-## Evaluación de la práctica
-
-La evaluación de la práctica se realizará mediante revisión por pares (P2P). Cada alumno tendrá que revisar la práctica de 3 de sus compañeros y otros 3 revisarán la suya. Se puede utilizar la herramienta de autocorrección (moocauto) como ayuda para revisar la práctica de los compañeros. 
-
-El objetivo de este curso es sacar el máximo provecho al trabajo que están dedicando, por lo que les recomendamos que utilicen la evaluación para ayudar a sus compañeros enviando comentarios sobre la corrección del código, su claridad, legibilidad, estructuración y documentación. 
-
-Dado que es un curso para principiantes, ante la duda les pedimos que sean benevolentes con sus compañeros, porque muchos participantes están empezando y los primeros pasos siempre son difíciles.
-
-**OJO! Una vez enviada la evaluación, está no se puede cambiar.** Piensen bien su evaluación antes de enviarla.
-
-**RÚBRICA**: Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
-
-* **25%:** Muestra correctamente las vidas del usuario
-* **25%:** Muestra correctamente la puntuación del usuario
-* **50%:** La funcionalidad del oponente final está implementada correctamente
