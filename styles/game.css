@@ -1,27 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-html {
-  overflow: hidden;
+body {
+	overflow: hidden;
+	margin: 0;
 }
 
 .Opponent {
 	animation: rotation 3s infinite linear;
-	-webkit-animation: rotation 3s infinite linear;
 }
 
 .paused .Opponent {
-	animation: none;
-	-webkit-animation: none;
+	animation-play-state: paused;
+	/* animation: none;*/
 }
 
-@-webkit-keyframes rotation {
+@keyframes rotation {
 	from {
 		transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(359deg);
-		-webkit-transform: rotate(359deg);
 	}
 }
 
@@ -31,7 +30,7 @@ html {
 	color: #333;
 	padding: 10px 20px;
 	outline: none;
-	font-family: monospace;
+	font-family: Audiowide;
 	cursor: pointer;
 }
 

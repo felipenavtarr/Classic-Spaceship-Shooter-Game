@@ -1,0 +1,49 @@
+.fondo {
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: -1;
+}
+
+#fondo_inic {
+    height: 100%;
+    animation: fondo_inic_anim 4s linear paused;
+}
+
+#fondo1 {
+    height: 200%;
+    top: -200%;
+    animation: fondo_anim 16s linear infinite paused;
+}
+
+#fondo2 {
+    height: 200%;
+    top: -200%;
+    animation: fondo_anim 16s linear 8s infinite paused;
+}
+
+.star {
+    background: rgb(2, 171, 250);
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+@keyframes fondo_inic_anim {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes fondo_anim {
+    /* 0% {
+        top: -200%;
+    } */
+    100% {
+        top: 200%;
+    }
+}

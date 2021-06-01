@@ -15,8 +15,10 @@
   <!-- -->
   <title>Classic Spaceship Shooter</title>
   <link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-  <link type="text/css" rel="stylesheet" href="styles/game.css">
+  <link type="text/css" rel="stylesheet" href="styles/game.css"/>
+  <link type="text/css" rel="stylesheet" href="styles/fondo_scroll.css"/>
   <script src="/scripts/Game.js" type="text/javascript"></script>
+  <script src="/scripts/fondo_scroll.js" type="text/javascript"></script>
   <script src="/scripts/classes/Entity.js" type="text/javascript"></script>
   <script src="/scripts/classes/Character.js" type="text/javascript"></script>
   <script src="/scripts/classes/Player.js" type="text/javascript"></script>
@@ -27,9 +29,14 @@
 </head>
 
 <body>
+  <div class="fondo" id="fondo_inic"></div>
+  <div class="fondo" id="fondo1"></div>
+  <div class="fondo" id="fondo2"></div> 
+
   <button id="pause" class="gamebutton" onclick="this.blur();">Pause</button>
   <button id="reset" class="gamebutton" onclick="this.blur();">NEW GAME</button>
   <button id="button_install" class="gamebutton" aria-label="Install" hidden>INSTALL Spaceship Shooter...</button>
+
   <ul>
       <li id="scoreli"></li>
       <li id="livesli"></li>

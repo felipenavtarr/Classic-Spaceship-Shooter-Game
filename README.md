@@ -6,7 +6,7 @@
 
 # Classic Spaceship Shooter Game - PWA
 
-Versión: 4 de Mayo de 2021
+Versión: 2 de junio de 2021
 
 ## Abstract
 
@@ -14,10 +14,10 @@ PWA consistente en un clásico juego de disparos de naves espaciales con perspec
 
 ## Descripción
 
-Juego desarrollado con HTML, CSS y JavaScript. No se ha usado canvas. Clásico juego de disparos, en el que manejaremos a nuestro personaje (nave) desde una perspectiva cenital utilizando las flechas del teclado o la pantalla táctil. **El objetivo es todo un clásico: disparar a una serie de naves que aparecerán en la pantalla a la vez que esquivamos sus disparos.**
+Juego desarrollado con HTML, CSS y JavaScript. No se ha usado canvas. Clásico juego de disparos, en el que manejaremos nuestra nave desde una perspectiva cenital utilizando las flechas del teclado o la pantalla táctil. **El objetivo es todo un clásico: disparar a una serie de naves que aparecerán en la pantalla a la vez que esquivamos sus disparos.**
 
 <p align="center">
-  <img width="500" height="645" style="border: 1px solid grey;" src="./assets/images/del_readme/juego.jpg">
+  <img width="600" height="537" style="border: 1px solid grey;" src="./assets/images/del_readme/juego.jpg">
 </p>
 
 ## Elementos del juego

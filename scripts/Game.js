@@ -42,6 +42,9 @@ class Game {
 
             this.player = new Player(this);
             this.timer = setInterval(() => this.update(), 50);
+
+            crear_fondo();
+            iniciar_fondo();
         }
     }
 
@@ -49,16 +52,21 @@ class Game {
      * Pausa o continúa el juego
      */
     pauseOrResume() {
-        if (this.paused) {
-            this.timer = setInterval(() => this.update(), 50);
-            document.body.classList.remove('paused');
-            this.paused = false;
-        } else {
-            clearInterval(this.timer);
-            document.body.classList.add('paused');
-            this.paused = true;
+        if (!this.ended) {
+            if (this.paused) {
+                this.timer = setInterval(() => this.update(), 50);
+                document.body.classList.remove('paused');
+                this.paused = false;
+                iniciar_fondo();
+            } else {
+                clearInterval(this.timer);
+                document.body.classList.add('paused');
+                this.paused = true;
+                parar_fondo();
+            }
         }
     }
+    
     /**
      * Añade un nuevo disparo al juego, ya sea del oponente o del personaje principal
      * @param character {Character} Personaje que dispara
@@ -215,6 +223,7 @@ class Game {
             let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
             gameOver.render();
         }
+        parar_fondo();
     }
 
     /**
